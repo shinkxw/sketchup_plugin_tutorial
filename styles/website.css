@@ -1,0 +1,15 @@
+.book-summary ul.summary li.header {
+    color: #273849;
+    font-size: 19px;
+    font-weight: 600;
+}
+.book-summary ul.summary li a, .book-summary ul.summary li span {
+    font-size: 16px;
+    color: #4f5959;
+}
+.book-summary ul.summary li.divider {
+    display: none;
+}
+.book-summary ul.summary li a.gitbook-link {
+    display: none;
+}

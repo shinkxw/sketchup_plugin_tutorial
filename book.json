@@ -1,0 +1,14 @@
+{
+    "title": "SketchUp plugin tutorial",
+    "author": "Shink",
+    "description": "Shink SketchUp plugin tutorial",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "styles": {
+        "website": "./styles/website.css",
+        "pdf": "styles/website.css"
+    },
+    "plugins": [
+        "-sharing"
+    ]
+}
