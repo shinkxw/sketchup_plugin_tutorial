@@ -14,4 +14,5 @@
 * [api服务搭建](library/api_server.md)
 
 ## 演示插件开发流程
+* [开发怎样的插件](demo_plugin/what_kind_of_plugin_to_develop.md)
 
