@@ -154,7 +154,7 @@ end
 main.rb文件中定义了显示两个窗口的方法，并创建了一个工具栏，设置了两个按钮与窗口调用的关联。其中`@quick_naming_dialog ||= Browser.new("快速命名分层", 'quick_naming')`这行用到了||=运算符，它的意思是当@quick_naming_dialog为nil时，将一个新建的窗口对象赋给@quick_naming_dialog，当@quick_naming_dialog不为nil时，则不进行操作。因此当这行代码被多次调用时，@quick_naming_dialog只会被赋值一次，这样每次调用这个方法就会打开同一个窗口对象。因为Vue框架需要浏览器版本至少为IE9，check_browser方法会在打开窗口前调用，检查当前的IE浏览器版本。
 ```ruby
 module ShinkQuickNaming
-  class Browser
+  class Browser < ShinkBrowser
     def initialize(title, type)
       @type = type
       super(title, true, type, 0, 0, 500, 150, true)
@@ -243,6 +243,6 @@ module ShinkQuickNaming
   end
 end
 ```
-browser.rb文件包含了两个部分的内容。第一部分对基础库提供的Browser类进行了扩展，定义了初始化方法，需要窗口标题与窗口类型两个参数。窗口类型用于区分窗口的作用，它影响到窗口的最小长宽、打开时使用的路径以及作为某些方法的索引参数。其中set_callback方法中设置的都是对前端的回调处理，这里使用的是基础库提供的add_callback方法，它与前端的方法一起作用，压缩并优化了传入参数，使得后端可以以对象的形式来操作数据，我们在后面的章节中还会继续根据要实现的功能增加回调。第二部分则定义了两个观察者类，分别用来在选中对象改变与当前打开模型变化时执行预设的回调，用于根据用户的操作来刷新前端页面上的数据。我们可看到RefreshEntityObserver中有对ModelChangeObserver的调用，这是因为当打开的模型改变时，之前设置的SelectionObserver会无效，所以我们需要监测这个变化并再次开启SelectionObserver。
+browser.rb文件包含了两个部分的内容。第一部分以基础库提供的ShinkBrowser类作为基类定义了窗口类，添加了初始化方法，需要窗口标题与窗口类型两个参数。窗口类型用于区分窗口的作用，它影响到窗口的最小长宽、打开时使用的路径以及作为某些方法的索引参数。其中set_callback方法中设置的都是对前端的回调处理，这里使用的是基类提供的add_callback方法，它与前端的方法一起作用，压缩并优化了传入参数，使得后端可以以对象的形式来操作数据，我们在后面的章节中还会继续根据要实现的功能增加回调。第二部分则定义了两个观察者类，分别用来在选中对象改变与当前打开模型变化时执行预设的回调，用于根据用户的操作来刷新前端页面上的数据。我们可看到RefreshEntityObserver中有对ModelChangeObserver的调用，这是因为当打开的模型改变时，之前设置的SelectionObserver会无效，所以我们需要监测这个变化并再次开启SelectionObserver。
 
 在添加了这些代码文件以及两种图标后，打开SU我们就能看到有两个图标的工具栏出现了，现在由于尚未构建前端，点击按钮后出现的窗口还是没有内容的，在下个章节中，我们将重点讲述前端如何构建。
