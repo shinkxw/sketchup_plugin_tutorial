@@ -16,4 +16,5 @@
 ## 演示插件开发流程
 * [开发怎样的插件](demo_plugin/what_kind_of_plugin_to_develop.md)
 * [插件雏形](demo_plugin/plugin_prototype.md)
+* [前端构建](demo_plugin/front_part.md)
 
