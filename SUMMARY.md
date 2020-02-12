@@ -17,4 +17,5 @@
 * [开发怎样的插件](demo_plugin/what_kind_of_plugin_to_develop.md)
 * [插件雏形](demo_plugin/plugin_prototype.md)
 * [前端构建](demo_plugin/front_part.md)
+* [数据结构设计与设置](demo_plugin/data_structure_design_and_setup.md)
 
