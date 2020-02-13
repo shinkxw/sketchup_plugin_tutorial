@@ -7,7 +7,7 @@
     font-size: 16px;
     color: #4f5959;
 }
-.book-summary ul.summary li.divider {
+.book-summary ul.summary li:nth-last-of-type(2) {
     display: none;
 }
 .book-summary ul.summary li a.gitbook-link {
