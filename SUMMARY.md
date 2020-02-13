@@ -19,4 +19,5 @@
 * [前端构建](demo_plugin/front_part.md)
 * [数据结构设计与设置](demo_plugin/data_structure_design_and_setup.md)
 * [命名分层功能实现](demo_plugin/quick_naming_achieve.md)
+* [预置数据与打包](demo_plugin/data_preset_and_pack.md)
 
