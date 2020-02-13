@@ -1,0 +1,666 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>插件雏形 · SketchUp plugin tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Shink">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="front_part.html" />
+    
+    
+    <link rel="prev" href="what_kind_of_plugin_to_develop.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">SU插件开发基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../develop_base/ruby.html">
+            
+                <a href="../develop_base/ruby.html">
+            
+                    
+                    Ruby是根基
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../develop_base/environment.html">
+            
+                <a href="../develop_base/environment.html">
+            
+                    
+                    开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../develop_base/debug.html">
+            
+                <a href="../develop_base/debug.html">
+            
+                    
+                    插件存放与调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础库解读</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../library/develop_plugin_like_website.html">
+            
+                <a href="../library/develop_plugin_like_website.html">
+            
+                    
+                    像开发网站一样开发插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../library/transfer_and_gem.html">
+            
+                <a href="../library/transfer_and_gem.html">
+            
+                    
+                    调用方式与gem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../library/data_store.html">
+            
+                <a href="../library/data_store.html">
+            
+                    
+                    本地数据存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../library/api_server.html">
+            
+                <a href="../library/api_server.html">
+            
+                    
+                    api服务搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">演示插件开发流程</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="what_kind_of_plugin_to_develop.html">
+            
+                <a href="what_kind_of_plugin_to_develop.html">
+            
+                    
+                    开发怎样的插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="plugin_prototype.html">
+            
+                <a href="plugin_prototype.html">
+            
+                    
+                    插件雏形
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="front_part.html">
+            
+                <a href="front_part.html">
+            
+                    
+                    前端构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="data_structure_design_and_setup.html">
+            
+                <a href="data_structure_design_and_setup.html">
+            
+                    
+                    数据结构设计与设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="quick_naming_achieve.html">
+            
+                <a href="quick_naming_achieve.html">
+            
+                    
+                    命名分层功能实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="data_preset_and_pack.html">
+            
+                <a href="data_preset_and_pack.html">
+            
+                    
+                    预置数据与打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../postscript.html">
+            
+                <a href="../postscript.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >插件雏形</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x63D2;&#x4EF6;&#x96CF;&#x5F62;">&#x63D2;&#x4EF6;&#x96CF;&#x5F62;</h1>
+<p>&#x73B0;&#x5728;&#x5F00;&#x59CB;&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x5148;&#x5EFA;&#x7ACB;shink_quick_naming&#x6587;&#x4EF6;&#x5939;&#x4F5C;&#x4E3A;&#x6839;&#x6587;&#x4EF6;&#x5939;(&#x4E5F;&#x662F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7684;&#x6839;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x540E;&#x6587;&#x4F1A;&#x7528;&#x6839;&#x6587;&#x4EF6;&#x5939;&#x6307;&#x4EE3;)&#xFF0C;&#x7136;&#x540E;&#x5728;&#x5176;&#x4E2D;&#x5EFA;&#x7ACB;shink_quick_naming&#x6587;&#x4EF6;&#x5939;&#x6765;&#x5B58;&#x653E;Ruby&#x4EE3;&#x7801;(&#x540E;&#x6587;&#x4F1A;&#x7528;&#x540E;&#x7AEF;&#x6587;&#x4EF6;&#x5939;&#x6307;&#x4EE3;)&#xFF0C;&#x5EFA;&#x7ACB;shink_quick_naming_front&#x6587;&#x4EF6;&#x5939;&#x6765;&#x5B58;&#x653E;&#x524D;&#x7AEF;&#x4EE3;&#x7801;(&#x540E;&#x6587;&#x4F1A;&#x7528;&#x524D;&#x7AEF;&#x6587;&#x4EF6;&#x5939;&#x6307;&#x4EE3;)&#xFF0C;&#x65B0;&#x5EFA;shink_quick_naming.rb&#x4F5C;&#x4E3A;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x7684;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">&quot;sketchup.rb&quot;</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">&quot;extensions.rb&quot;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">ShinkQuickNaming</span></span>
+  PluginName = <span class="hljs-string">&apos;shink_quick_naming&apos;</span>
+  PluginChineseName = <span class="hljs-string">&apos;&#x5FEB;&#x901F;&#x547D;&#x540D;&#x5206;&#x5C42;&apos;</span>
+  Version = <span class="hljs-string">&apos;0.0.1&apos;</span>.freeze
+
+  load_path = File.join(File.dirname(__FILE_<span class="hljs-number">_</span>), <span class="hljs-string">&quot;<span class="hljs-subst">#{PluginName}</span>/load.rb&quot;</span>)
+  extension = SketchupExtension.new(PluginChineseName, load_path)
+  extension.version = Version
+  extension.creator = <span class="hljs-string">&apos;Shink&apos;</span>
+  Sketchup.register_extension(extension, <span class="hljs-keyword">true</span>)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x524D;&#x9762;&#x4E24;&#x884C;&#x7B97;&#x662F;&#x4F8B;&#x884C;&#x516C;&#x4E8B;&#x3002;&#x7B2C;4&#x884C;&#x8D77;&#x5F00;&#x59CB;&#x6B63;&#x5F0F;&#x5185;&#x5BB9;&#xFF0C;&#x9996;&#x5148;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x5373;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x6A21;&#x5757;&#xFF0C;&#x540D;&#x79F0;&#x4E00;&#x822C;&#x5C31;&#x662F;&#x63D2;&#x4EF6;&#x540D;&#x79F0;&#x7684;&#x9A7C;&#x5CF0;&#x5F0F;&#x5199;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;Ruby&#x7684;&#x5E38;&#x91CF;&#x9700;&#x8981;&#x4EE5;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#xFF0C;&#x5B83;&#x4F1A;&#x4F5C;&#x4E3A;&#x540E;&#x9762;&#x5199;&#x7684;&#x6240;&#x6709;&#x4EE3;&#x7801;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x5728;&#x540D;&#x79F0;&#x4E0A;&#x8981;&#x5C3D;&#x91CF;&#x4E0D;&#x548C;&#x522B;&#x7684;&#x63D2;&#x4EF6;&#x91CD;&#x590D;&#x3002;&#x540E;&#x9762;&#x4E09;&#x884C;&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x5E38;&#x91CF;&#x7684;&#x65B9;&#x5F0F;&#x4FDD;&#x5B58;&#x4E86;&#x63D2;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x4E2D;&#x6587;&#x540D;&#x4E0E;&#x7248;&#x672C;&#x53F7;&#x3002;&#x7B2C;9&#x884C;&#x901A;&#x8FC7;&#x62FC;&#x63A5;&#x65B9;&#x6CD5;&#x83B7;&#x5F97;&#x4E86;&#x63D2;&#x4EF6;&#x52A0;&#x8F7D;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x5176;&#x4E2D;__FILE__&#x7684;&#x503C;&#x662F;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x7B2C;10&#x884C;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x7684;&#x4E2D;&#x6587;&#x540D;&#x4EE5;&#x53CA;&#x63D2;&#x4EF6;&#x52A0;&#x8F7D;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x901A;&#x8FC7;SU&#x63D0;&#x4F9B;&#x7684;api&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;extension&#x5BF9;&#x8C61;&#xFF0C;&#x7ED9;&#x5B83;&#x8BBE;&#x7F6E;&#x4E86;&#x7248;&#x672C;&#x4E0E;&#x521B;&#x5EFA;&#x4EBA;&#x7684;&#x4FE1;&#x606F;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;SU&#x7684;api&#x6765;&#x6CE8;&#x518C;&#x4ED6;&#x5E76;&#x5E0C;&#x671B;&#x88AB;&#x7ACB;&#x523B;&#x52A0;&#x8F7D;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x7684;&#x610F;&#x4E49;&#xFF0C;SU&#x6BCF;&#x6B21;&#x5F00;&#x542F;&#x65F6;&#x90FD;&#x4F1A;&#x52A0;&#x8F7D;&#x6240;&#x6709;&#x63D2;&#x4EF6;&#x7684;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;&#x63D2;&#x4EF6;&#x7684;&#x542F;&#x7528;&#x72B6;&#x6001;&#x51B3;&#x5B9A;&#x4E86;&#x5B83;&#x7684;&#x52A0;&#x8F7D;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x4F1A;&#x88AB;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x5F00;&#x59CB;&#x521D;&#x59CB;&#x5316;&#x540E;&#x7AEF;&#x4EE3;&#x7801;&#x7684;&#x6574;&#x4F53;&#x7ED3;&#x6784;&#xFF0C;&#x9996;&#x5148;&#x5728;&#x540E;&#x7AEF;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x5C06;<a href="https://github.com/shinkxw/shink_sketchup_library" target="_blank">&#x57FA;&#x7840;&#x5E93;</a>&#x7684;&#x4EE3;&#x7801;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x590D;&#x5236;&#x8FC7;&#x6765;&#xFF0C;&#x7136;&#x540E;&#x65B0;&#x5EFA;&#x63D2;&#x4EF6;&#x52A0;&#x8F7D;&#x6587;&#x4EF6;load.rb&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-ruby">$LOAD_PATH.unshift(File.dirname(__FILE_<span class="hljs-number">_</span>))
+
+load(<span class="hljs-string">&apos;shink_sketchup_library/load.rb&apos;</span>)<span class="hljs-comment">#&#x52A0;&#x8F7D;&#x57FA;&#x7840;&#x5E93;</span>
+SHINK_LIBRARY.inject_to_module(ShinkQuickNaming)<span class="hljs-comment">#&#x6CE8;&#x5165;&#x5230;&#x6A21;&#x5757;</span>
+
+<span class="hljs-symbol">Sketchup:</span><span class="hljs-symbol">:require</span>(<span class="hljs-string">&apos;path&apos;</span>)<span class="hljs-comment">#&#x8DEF;&#x5F84;&#x76F8;&#x5173;&#x65B9;&#x6CD5;</span>
+<span class="hljs-symbol">Sketchup:</span><span class="hljs-symbol">:require</span>(<span class="hljs-string">&apos;db&apos;</span>)<span class="hljs-comment">#&#x6570;&#x636E;&#x5B9A;&#x4E49;</span>
+<span class="hljs-symbol">Sketchup:</span><span class="hljs-symbol">:require</span>(<span class="hljs-string">&apos;main&apos;</span>)<span class="hljs-comment">#&#x6309;&#x94AE;&#x83DC;&#x5355;&#x5B9A;&#x4E49;</span>
+<span class="hljs-symbol">Sketchup:</span><span class="hljs-symbol">:require</span>(<span class="hljs-string">&apos;browser&apos;</span>)<span class="hljs-comment">#&#x5BF9;&#x8BDD;&#x6846;&#x5B9A;&#x4E49;</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x8BB2;&#x8BB2;Ruby&#x662F;&#x5982;&#x4F55;&#x627E;&#x5230;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x6765;&#x52A0;&#x8F7D;&#x7684;&#xFF0C;&#x5F53;&#x4F60;require&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;Ruby&#x4F1A;&#x4F9D;&#x6B21;&#x5728;$LOAD_PATH(&#x8FD9;&#x662F;Ruby&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;)&#x4E2D;&#x7684;&#x8DEF;&#x5F84;&#x91CC;&#x53BB;&#x5BFB;&#x627E;&#x6709;&#x8FD9;&#x4E2A;&#x540D;&#x79F0;&#x7684;rb&#x6587;&#x4EF6;&#x5E76;&#x6267;&#x884C;&#x3002;&#x6240;&#x4EE5;&#x5728;&#x52A0;&#x8F7D;&#x6587;&#x4EF6;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x901A;&#x8FC7;&#x8C03;&#x7528;$LOAD_PATH&#x7684;unshift&#x65B9;&#x6CD5;&#x5C06;&#x5F53;&#x524D;&#x7684;&#x540E;&#x7AEF;&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;&#x653E;&#x5728;&#x6570;&#x7EC4;&#x7B2C;&#x4E00;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x8FD9;&#x6837;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x6765;&#x8FDB;&#x884C;&#x68C0;&#x7D22;&#x7684;&#x8BDD;&#xFF0C;&#x5373;&#x4F7F;&#x5176;&#x4ED6;&#x63D2;&#x4EF6;&#x4E2D;&#x6709;&#x548C;&#x6211;&#x4EEC;&#x76F8;&#x540C;&#x540D;&#x79F0;&#x7684;rb&#x6587;&#x4EF6;&#x4E5F;&#x4E0D;&#x4F1A;&#x52A0;&#x8F7D;&#x9519;&#x8BEF;&#x3002;&#x7B2C;3&#x7B2C;4&#x884C;&#x52A0;&#x8F7D;&#x5E76;&#x628A;&#x57FA;&#x7840;&#x5E93;&#x6CE8;&#x5165;&#x4E86;&#x63D2;&#x4EF6;&#x6A21;&#x5757;&#xFF0C;&#x7B2C;6&#x884C;&#x8D77;&#x5C31;&#x662F;&#x628A;&#x63D2;&#x4EF6;&#x4E2D;&#x7684;rb&#x6587;&#x4EF6;&#x90FD;&#x901A;&#x8FC7;Sketchup::require&#x65B9;&#x6CD5;&#x6765;&#x52A0;&#x8F7D;&#xFF0C;&#x8FD9;&#x662F;SU&#x63D0;&#x4F9B;&#x7684;&#xFF0C;&#x5B83;&#x6269;&#x5C55;&#x4E86;Ruby&#x81EA;&#x5E26;&#x7684;require&#x65B9;&#x6CD5;&#xFF0C;&#x80FD;&#x591F;&#x52A0;&#x8F7D;&#x52A0;&#x5BC6;&#x540E;&#x7684;rb&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x8BB2;&#x8BB2;&#x63D2;&#x4EF6;&#x4E2D;&#x51E0;&#x4E2A;&#x901A;&#x7528;&#x7684;rb&#x6587;&#x4EF6;&#xFF0C;&#x4ED6;&#x4EEC;&#x5404;&#x81EA;&#x8D1F;&#x8D23;&#x4E86;&#x4E00;&#x90E8;&#x5206;&#x57FA;&#x7840;&#x529F;&#x80FD;&#x3002;</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">ShinkQuickNaming</span></span>
+  PATH = File.dirname(__FILE_<span class="hljs-number">_</span>)
+  module_function
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">data_path</span></span>
+    <span class="hljs-string">&quot;<span class="hljs-subst">#{DocumentsPath}</span>/sketchup_plugin/<span class="hljs-subst">#{PluginName}</span>_<span class="hljs-subst">#{SuVersion}</span>&quot;</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">log_path</span><span class="hljs-params">(name = <span class="hljs-string">&apos;&apos;</span>)</span></span>
+    <span class="hljs-string">&quot;<span class="hljs-subst">#{data_path}</span>/log/<span class="hljs-subst">#{name}</span>&quot;</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tmp_path</span><span class="hljs-params">(name = <span class="hljs-string">&apos;&apos;</span>)</span></span>
+    <span class="hljs-string">&quot;<span class="hljs-subst">#{data_path}</span>/tmp/<span class="hljs-subst">#{name}</span>&quot;</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">small_icon_path</span><span class="hljs-params">(icon_name)</span></span>
+    <span class="hljs-string">&quot;<span class="hljs-subst">#{PATH}</span>/icon/<span class="hljs-subst">#{icon_name}</span>_32.png&quot;</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">large_icon_path</span><span class="hljs-params">(icon_name)</span></span>
+    <span class="hljs-string">&quot;<span class="hljs-subst">#{PATH}</span>/icon/<span class="hljs-subst">#{icon_name}</span>_64.png&quot;</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">preset_data_path</span><span class="hljs-params">(file_name)</span></span>
+    <span class="hljs-string">&quot;<span class="hljs-subst">#{PATH}</span>/preset_data/<span class="hljs-subst">#{file_name}</span>&quot;</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">local_page_path</span><span class="hljs-params">(type)</span></span>
+    <span class="hljs-string">&quot;<span class="hljs-subst">#{local_server_path}</span>/index.html?type=<span class="hljs-subst">#{type}</span>&amp;time=<span class="hljs-subst">#{Time.now.to_i}</span>&quot;</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">local_server_path</span></span>
+    <span class="hljs-string">&quot;http://localhost:<span class="hljs-subst">#{local_server_port}</span>&quot;</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">local_server_port</span></span>
+    <span class="hljs-string">&apos;38586&apos;</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">document_root_path</span></span>
+    <span class="hljs-keyword">if</span> IsDevelop
+      <span class="hljs-string">&quot;<span class="hljs-subst">#{PATH}</span>/../shink_quick_naming_front/dist&quot;</span>
+    <span class="hljs-keyword">else</span>
+      <span class="hljs-string">&quot;<span class="hljs-subst">#{PATH}</span>/dist&quot;</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+
+  FileUtils.mkdir_p(log_path)
+  FileUtils.remove_dir(tmp_path) <span class="hljs-keyword">if</span> Dir.exist?(tmp_path)
+  FileUtils.mkdir_p(tmp_path)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>path.rb&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x63D2;&#x4EF6;&#x4E2D;&#x548C;&#x8DEF;&#x5F84;&#x76F8;&#x5173;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5305;&#x62EC;&#x65E5;&#x5FD7;&#x8DEF;&#x5F84;&#xFF0C;&#x56FE;&#x6807;&#x8DEF;&#x5F84;&#xFF0C;&#x4E34;&#x65F6;&#x8DEF;&#x5F84;&#x7B49;&#x90FD;&#x662F;&#x5728;&#x8FD9;&#x91CC;&#x5B9A;&#x4E49;&#x7684;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8FD9;&#x91CC;&#x8FD8;&#x5B9A;&#x4E49;&#x4E86;&#x670D;&#x52A1;&#x5668;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x5176;&#x4E2D;local_server_port&#x5373;&#x670D;&#x52A1;&#x5668;&#x6302;&#x8F7D;&#x7684;&#x7AEF;&#x53E3;&#xFF0C;&#x5C3D;&#x91CF;&#x9009;&#x53D6;&#x4E0D;&#x4F1A;&#x51B2;&#x7A81;&#x7684;&#x7AEF;&#x53E3;&#x53F7;(&#x7AEF;&#x53E3;&#x4E0A;&#x9650;&#x662F;65535&#xFF0C;&#x6700;&#x597D;&#x9009;&#x62E9;&#x4E94;&#x4F4D;&#x6570;&#x7684;&#x7AEF;&#x53E3;&#x53F7;)&#x3002;document_root_path&#x65B9;&#x6CD5;&#x5219;&#x6839;&#x636E;&#x63D2;&#x4EF6;&#x7684;&#x5F00;&#x53D1;&#x72B6;&#x6001;&#x8FD4;&#x56DE;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6587;&#x4EF6;&#x6839;&#x76EE;&#x5F55;&#x8DEF;&#x5F84;&#x3002;</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">ShinkQuickNaming</span></span>
+  SuDb.set_section(<span class="hljs-string">&quot;<span class="hljs-subst">#{PluginName}</span>_DB&quot;</span>)
+  Config = <span class="hljs-symbol">SuDb:</span><span class="hljs-symbol">:Config</span>.new_by_key(<span class="hljs-string">&apos;config&apos;</span>)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>db.rb&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;SuDb&#x4F7F;&#x7528;&#x7684;section(&#x7528;&#x6765;&#x5212;&#x5206;&#x4E0D;&#x540C;&#x63D2;&#x4EF6;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x4F4D;&#x7F6E;)&#xFF0C;&#x4EE5;&#x53CA;&#x5168;&#x5C40;&#x4F1A;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x8FD9;&#x91CC;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x5BF9;&#x8C61;&#xFF0C;&#x7528;&#x6765;&#x5B58;&#x8D2E;&#x63D2;&#x4EF6;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x57FA;&#x7840;&#x5E93;&#x4E2D;&#x7684;&#x6709;&#x4E9B;&#x529F;&#x80FD;&#x4E5F;&#x4F1A;&#x4F7F;&#x7528;&#x5230;&#x8FD9;&#x4E2A;&#x5E38;&#x91CF;&#x3002;</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">ShinkQuickNaming</span></span>
+  <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Main</span></span>
+    module_function
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_quick_naming_dialog</span></span>
+      <span class="hljs-keyword">if</span> check_browser
+        @quick_naming_dialog ||= Browser.new(<span class="hljs-string">&quot;&#x5FEB;&#x901F;&#x547D;&#x540D;&#x5206;&#x5C42;&quot;</span>, <span class="hljs-string">&apos;quick_naming&apos;</span>)
+        @quick_naming_dialog.show
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_plugin_settings_dialog</span></span>
+      <span class="hljs-keyword">if</span> check_browser
+        @plugin_settings_dialog ||= Browser.new(<span class="hljs-string">&quot;&#x63D2;&#x4EF6;&#x8BBE;&#x7F6E;&quot;</span>, <span class="hljs-string">&apos;plugin_settings&apos;</span>)
+        @plugin_settings_dialog.show
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">check_browser</span></span>
+      <span class="hljs-keyword">if</span> ShinkQuickNaming.const_defined?(<span class="hljs-symbol">:IEVersion</span>) &amp;&amp; IEVersion &lt; <span class="hljs-number">9</span>
+        UI.messagebox(<span class="hljs-string">&apos;&#x60A8;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x7248;&#x672C;&#x8FC7;&#x4F4E;, &#x8BF7;&#x81F3;&#x5C11;&#x5347;&#x7EA7;&#x81F3;IE9&apos;</span>)
+        <span class="hljs-keyword">false</span>
+      <span class="hljs-keyword">else</span>
+        <span class="hljs-keyword">true</span>
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-keyword">unless</span> file_loaded?(__FILE_<span class="hljs-number">_</span>)<span class="hljs-comment">#&#x4FDD;&#x8BC1;&#x4EE3;&#x7801;&#x5757;&#x4E2D;&#x4EE3;&#x7801;&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;</span>
+    toolbar = UI.toolbar(PluginName)<span class="hljs-comment">#&#x521B;&#x5EFA;&#x5DE5;&#x5177;&#x680F;</span>
+
+    cmd1 = <span class="hljs-symbol">UI:</span><span class="hljs-symbol">:Command</span>.new(<span class="hljs-string">&quot;Show Quick Naming Dialog&quot;</span>) {
+      Main.show_quick_naming_dialog
+    }
+    cmd1.small_icon = small_icon_path(<span class="hljs-string">&apos;quick_naming&apos;</span>)<span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x5C0F;&#x56FE;&#x6807;</span>
+    cmd1.large_icon = large_icon_path(<span class="hljs-string">&apos;quick_naming&apos;</span>)<span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x5927;&#x56FE;&#x6807;</span>
+    cmd1.tooltip = <span class="hljs-string">&apos;&#x5FEB;&#x901F;&#x547D;&#x540D;&#x5206;&#x5C42;&apos;</span><span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x63D0;&#x793A;&#x6587;&#x5B57;</span>
+    toolbar = toolbar.add_item(cmd1)<span class="hljs-comment">#&#x6DFB;&#x52A0;&#x6309;&#x94AE;</span>
+
+    cmd99 = <span class="hljs-symbol">UI:</span><span class="hljs-symbol">:Command</span>.new(<span class="hljs-string">&quot;Show Plugin Settings Dialog&quot;</span>) {
+      Main.show_plugin_settings_dialog
+    }
+    cmd99.small_icon = small_icon_path(<span class="hljs-string">&apos;plugin_settings&apos;</span>)
+    cmd99.large_icon = large_icon_path(<span class="hljs-string">&apos;plugin_settings&apos;</span>)
+    cmd99.tooltip = <span class="hljs-string">&apos;&#x63D2;&#x4EF6;&#x8BBE;&#x7F6E;&apos;</span>
+    toolbar = toolbar.add_item(cmd99)
+
+    toolbar.show<span class="hljs-comment">#&#x663E;&#x793A;&#x5DE5;&#x5177;&#x680F;</span>
+
+    file_loaded(__FILE_<span class="hljs-number">_</span>)
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>main.rb&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x663E;&#x793A;&#x4E24;&#x4E2A;&#x7A97;&#x53E3;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#x680F;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E86;&#x4E24;&#x4E2A;&#x6309;&#x94AE;&#x4E0E;&#x7A97;&#x53E3;&#x8C03;&#x7528;&#x7684;&#x5173;&#x8054;&#x3002;&#x5176;&#x4E2D;<code>@quick_naming_dialog ||= Browser.new(&quot;&#x5FEB;&#x901F;&#x547D;&#x540D;&#x5206;&#x5C42;&quot;, &apos;quick_naming&apos;)</code>&#x8FD9;&#x884C;&#x7528;&#x5230;&#x4E86;||=&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x5B83;&#x7684;&#x610F;&#x601D;&#x662F;&#x5F53;@quick_naming_dialog&#x4E3A;nil&#x65F6;&#xFF0C;&#x5C06;&#x4E00;&#x4E2A;&#x65B0;&#x5EFA;&#x7684;&#x7A97;&#x53E3;&#x5BF9;&#x8C61;&#x8D4B;&#x7ED9;@quick_naming_dialog&#xFF0C;&#x5F53;@quick_naming_dialog&#x4E0D;&#x4E3A;nil&#x65F6;&#xFF0C;&#x5219;&#x4E0D;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;&#x56E0;&#x6B64;&#x5F53;&#x8FD9;&#x884C;&#x4EE3;&#x7801;&#x88AB;&#x591A;&#x6B21;&#x8C03;&#x7528;&#x65F6;&#xFF0C;@quick_naming_dialog&#x53EA;&#x4F1A;&#x88AB;&#x8D4B;&#x503C;&#x4E00;&#x6B21;&#xFF0C;&#x8FD9;&#x6837;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C31;&#x4F1A;&#x6253;&#x5F00;&#x540C;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x5BF9;&#x8C61;&#x3002;&#x56E0;&#x4E3A;Vue&#x6846;&#x67B6;&#x9700;&#x8981;&#x6D4F;&#x89C8;&#x5668;&#x7248;&#x672C;&#x81F3;&#x5C11;&#x4E3A;IE9&#xFF0C;check_browser&#x65B9;&#x6CD5;&#x4F1A;&#x5728;&#x6253;&#x5F00;&#x7A97;&#x53E3;&#x524D;&#x8C03;&#x7528;&#xFF0C;&#x68C0;&#x67E5;&#x5F53;&#x524D;&#x7684;IE&#x6D4F;&#x89C8;&#x5668;&#x7248;&#x672C;&#x3002;</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">ShinkQuickNaming</span></span>
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Browser</span> &lt; ShinkBrowser</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(title, type)</span></span>
+      @type = type
+      <span class="hljs-keyword">super</span>(title, <span class="hljs-keyword">true</span>, type, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">500</span>, <span class="hljs-number">150</span>, <span class="hljs-keyword">true</span>)
+      set_background_color(get_default_dialog_color)
+      set_callback
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_callback</span></span>
+      add_callback(<span class="hljs-string">&quot;alert&quot;</span>){|d, param| UI.messagebox(param.message)}
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show</span></span>
+      <span class="hljs-keyword">if</span> visible?
+        bring_to_front
+      <span class="hljs-keyword">else</span>
+        set_url(index_path)
+        set_window_min_size_by_type
+        SuRunJs.set_web_dialog(@type, <span class="hljs-keyword">self</span>)<span class="hljs-comment">#&#x5C06;&#x7A97;&#x53E3;&#x7C7B;&#x578B;&#x4E0E;&#x7A97;&#x53E3;&#x5B9E;&#x4F8B;&#x7ED1;&#x5B9A;</span>
+        <span class="hljs-keyword">case</span> @type
+        <span class="hljs-keyword">when</span> <span class="hljs-string">&apos;quick_naming&apos;</span>
+          RefreshEntityObserver.open(@type) <span class="hljs-keyword">do</span><span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x9009;&#x4E2D;&#x5BF9;&#x8C61;&#x6539;&#x53D8;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x4EE3;&#x7801;</span>
+            run_js(@type, <span class="hljs-string">&quot;quick_naming.refresh_entity_info()&quot;</span>)
+          <span class="hljs-keyword">end</span>
+          after_close{ RefreshEntityObserver.close(@type) }<span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x7A97;&#x53E3;&#x5173;&#x95ED;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x4EE3;&#x7801;</span>
+        <span class="hljs-keyword">end</span>
+        <span class="hljs-keyword">super</span>
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_window_min_size_by_type</span></span>
+      <span class="hljs-keyword">case</span> @type
+      <span class="hljs-keyword">when</span> <span class="hljs-string">&apos;quick_naming&apos;</span>
+        set_window_min_size(<span class="hljs-number">500</span>, <span class="hljs-number">460</span>)
+      <span class="hljs-keyword">when</span> <span class="hljs-string">&apos;plugin_settings&apos;</span>
+        set_window_min_size(<span class="hljs-number">1200</span>, <span class="hljs-number">670</span>)
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index_path</span></span>
+      ShinkQuickNaming.local_page_path(@type)
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RefreshEntityObserver</span> &lt; Sketchup::SelectionObserver</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">open</span><span class="hljs-params">(type, &amp;block)</span></span>
+      @type_observer_hash ||= {}
+      observer = RefreshEntityObserver.new(&amp;block)
+      @type_observer_hash[type] = observer
+      Sketchup.active_model.selection.add_observer(observer)
+      ModelChangeObserver.open(type){ RefreshEntityObserver.open(type, &amp;block) }
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">close</span><span class="hljs-params">(type)</span></span>
+      <span class="hljs-keyword">if</span> @type_observer_hash[type]
+        Sketchup.active_model.selection.remove_observer(@type_observer_hash[type])
+        @type_observer_hash[type] = <span class="hljs-keyword">nil</span>
+        ModelChangeObserver.close(type)
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(&amp;block)</span></span>;@block = block <span class="hljs-keyword">end</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onSelectionBulkChange</span><span class="hljs-params">(selection)</span></span>;@block.call <span class="hljs-keyword">end</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onSelectionCleared</span><span class="hljs-params">(selection)</span></span>;@block.call <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ModelChangeObserver</span> &lt; Sketchup::AppObserver</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">open</span><span class="hljs-params">(type, &amp;block)</span></span>
+      @type_observer_hash ||= {}
+      <span class="hljs-keyword">if</span> @type_observer_hash[type].<span class="hljs-keyword">nil</span>?
+        observer = ModelChangeObserver.new(&amp;block)
+        @type_observer_hash[type] = observer
+        Sketchup.add_observer(observer)
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">close</span><span class="hljs-params">(type)</span></span>
+      <span class="hljs-keyword">if</span> @type_observer_hash[type]
+        Sketchup.remove_observer(@type_observer_hash[type])
+        @type_observer_hash[type] = <span class="hljs-keyword">nil</span>
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(&amp;block)</span></span>;@block = block <span class="hljs-keyword">end</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onNewModel</span><span class="hljs-params">(model)</span></span>;@block.call <span class="hljs-keyword">end</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onOpenModel</span><span class="hljs-params">(model)</span></span>;@block.call <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>browser.rb&#x6587;&#x4EF6;&#x5305;&#x542B;&#x4E86;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x4EE5;&#x57FA;&#x7840;&#x5E93;&#x63D0;&#x4F9B;&#x7684;ShinkBrowser&#x7C7B;&#x4F5C;&#x4E3A;&#x57FA;&#x7C7B;&#x5B9A;&#x4E49;&#x4E86;&#x7A97;&#x53E3;&#x7C7B;&#xFF0C;&#x6DFB;&#x52A0;&#x4E86;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x6CD5;&#xFF0C;&#x9700;&#x8981;&#x7A97;&#x53E3;&#x6807;&#x9898;&#x4E0E;&#x7A97;&#x53E3;&#x7C7B;&#x578B;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x3002;&#x7A97;&#x53E3;&#x7C7B;&#x578B;&#x7528;&#x4E8E;&#x533A;&#x5206;&#x7A97;&#x53E3;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5B83;&#x5F71;&#x54CD;&#x5230;&#x7A97;&#x53E3;&#x7684;&#x6700;&#x5C0F;&#x957F;&#x5BBD;&#x3001;&#x6253;&#x5F00;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x8DEF;&#x5F84;&#x4EE5;&#x53CA;&#x4F5C;&#x4E3A;&#x67D0;&#x4E9B;&#x65B9;&#x6CD5;&#x7684;&#x7D22;&#x5F15;&#x53C2;&#x6570;&#x3002;&#x5176;&#x4E2D;set_callback&#x65B9;&#x6CD5;&#x4E2D;&#x8BBE;&#x7F6E;&#x7684;&#x90FD;&#x662F;&#x5BF9;&#x524D;&#x7AEF;&#x7684;&#x56DE;&#x8C03;&#x5904;&#x7406;&#xFF0C;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x57FA;&#x7C7B;&#x63D0;&#x4F9B;&#x7684;add_callback&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x4E0E;&#x524D;&#x7AEF;&#x7684;&#x65B9;&#x6CD5;&#x4E00;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x538B;&#x7F29;&#x5E76;&#x4F18;&#x5316;&#x4E86;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x4F7F;&#x5F97;&#x540E;&#x7AEF;&#x53EF;&#x4EE5;&#x4EE5;&#x5BF9;&#x8C61;&#x7684;&#x5F62;&#x5F0F;&#x6765;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x540E;&#x9762;&#x7684;&#x7AE0;&#x8282;&#x4E2D;&#x8FD8;&#x4F1A;&#x7EE7;&#x7EED;&#x6839;&#x636E;&#x8981;&#x5B9E;&#x73B0;&#x7684;&#x529F;&#x80FD;&#x589E;&#x52A0;&#x56DE;&#x8C03;&#x3002;&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x5219;&#x5B9A;&#x4E49;&#x4E86;&#x4E24;&#x4E2A;&#x89C2;&#x5BDF;&#x8005;&#x7C7B;&#xFF0C;&#x5206;&#x522B;&#x7528;&#x6765;&#x5728;&#x9009;&#x4E2D;&#x5BF9;&#x8C61;&#x6539;&#x53D8;&#x4E0E;&#x5F53;&#x524D;&#x6253;&#x5F00;&#x6A21;&#x578B;&#x53D8;&#x5316;&#x65F6;&#x6267;&#x884C;&#x9884;&#x8BBE;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x7528;&#x4E8E;&#x6839;&#x636E;&#x7528;&#x6237;&#x7684;&#x64CD;&#x4F5C;&#x6765;&#x5237;&#x65B0;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x4E0A;&#x7684;&#x6570;&#x636E;&#x3002;&#x53EF;&#x770B;&#x5230;RefreshEntityObserver&#x4E2D;&#x6709;&#x5BF9;ModelChangeObserver&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x5F53;&#x6253;&#x5F00;&#x7684;&#x6A21;&#x578B;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x4E4B;&#x524D;&#x8BBE;&#x7F6E;&#x7684;SelectionObserver&#x4F1A;&#x65E0;&#x6548;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x76D1;&#x6D4B;&#x8FD9;&#x4E2A;&#x53D8;&#x5316;&#x5E76;&#x518D;&#x6B21;&#x5F00;&#x542F;SelectionObserver&#x3002;</p>
+<p>&#x5728;&#x6DFB;&#x52A0;&#x4E86;&#x8FD9;&#x4E9B;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x4E24;&#x79CD;&#x56FE;&#x6807;&#x540E;&#xFF0C;&#x6253;&#x5F00;SU&#x6211;&#x4EEC;&#x5C31;&#x80FD;&#x770B;&#x5230;&#x6709;&#x4E24;&#x4E2A;&#x56FE;&#x6807;&#x7684;&#x5DE5;&#x5177;&#x680F;&#x51FA;&#x73B0;&#x4E86;&#xFF0C;&#x73B0;&#x5728;&#x7531;&#x4E8E;&#x5C1A;&#x672A;&#x6784;&#x5EFA;&#x524D;&#x7AEF;&#xFF0C;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x540E;&#x51FA;&#x73B0;&#x7684;&#x7A97;&#x53E3;&#x8FD8;&#x662F;&#x6CA1;&#x6709;&#x5185;&#x5BB9;&#x7684;&#xFF0C;&#x5728;&#x4E0B;&#x4E2A;&#x7AE0;&#x8282;&#x4E2D;&#x5C06;&#x91CD;&#x70B9;&#x8BB2;&#x8FF0;&#x524D;&#x7AEF;&#x5982;&#x4F55;&#x6784;&#x5EFA;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="what_kind_of_plugin_to_develop.html" class="navigation navigation-prev " aria-label="Previous page: 开发怎样的插件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="front_part.html" class="navigation navigation-next " aria-label="Next page: 前端构建">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"插件雏形","level":"4.2","depth":1,"next":{"title":"前端构建","level":"4.3","depth":1,"path":"demo_plugin/front_part.md","ref":"demo_plugin/front_part.md","articles":[]},"previous":{"title":"开发怎样的插件","level":"4.1","depth":1,"path":"demo_plugin/what_kind_of_plugin_to_develop.md","ref":"demo_plugin/what_kind_of_plugin_to_develop.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing"],"styles":{"website":"./styles/website.css","pdf":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Shink","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SketchUp plugin tutorial","language":"zh-hans","gitbook":"3.2.3","description":"Shink SketchUp plugin tutorial"},"file":{"path":"demo_plugin/plugin_prototype.md","mtime":"2020-02-13T07:31:18.983Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-13T08:40:33.469Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

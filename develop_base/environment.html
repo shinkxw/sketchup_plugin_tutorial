@@ -1,0 +1,436 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>开发环境 · SketchUp plugin tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Shink">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="debug.html" />
+    
+    
+    <link rel="prev" href="ruby.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">SU插件开发基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="ruby.html">
+            
+                <a href="ruby.html">
+            
+                    
+                    Ruby是根基
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="environment.html">
+            
+                <a href="environment.html">
+            
+                    
+                    开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="debug.html">
+            
+                <a href="debug.html">
+            
+                    
+                    插件存放与调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础库解读</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../library/develop_plugin_like_website.html">
+            
+                <a href="../library/develop_plugin_like_website.html">
+            
+                    
+                    像开发网站一样开发插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../library/transfer_and_gem.html">
+            
+                <a href="../library/transfer_and_gem.html">
+            
+                    
+                    调用方式与gem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../library/data_store.html">
+            
+                <a href="../library/data_store.html">
+            
+                    
+                    本地数据存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../library/api_server.html">
+            
+                <a href="../library/api_server.html">
+            
+                    
+                    api服务搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">演示插件开发流程</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../demo_plugin/what_kind_of_plugin_to_develop.html">
+            
+                <a href="../demo_plugin/what_kind_of_plugin_to_develop.html">
+            
+                    
+                    开发怎样的插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../demo_plugin/plugin_prototype.html">
+            
+                <a href="../demo_plugin/plugin_prototype.html">
+            
+                    
+                    插件雏形
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../demo_plugin/front_part.html">
+            
+                <a href="../demo_plugin/front_part.html">
+            
+                    
+                    前端构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../demo_plugin/data_structure_design_and_setup.html">
+            
+                <a href="../demo_plugin/data_structure_design_and_setup.html">
+            
+                    
+                    数据结构设计与设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../demo_plugin/quick_naming_achieve.html">
+            
+                <a href="../demo_plugin/quick_naming_achieve.html">
+            
+                    
+                    命名分层功能实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../demo_plugin/data_preset_and_pack.html">
+            
+                <a href="../demo_plugin/data_preset_and_pack.html">
+            
+                    
+                    预置数据与打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../postscript.html">
+            
+                <a href="../postscript.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >开发环境</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5F00;&#x53D1;&#x73AF;&#x5883;">&#x5F00;&#x53D1;&#x73AF;&#x5883;</h1>
+<h4 id="&#x672C;&#x5730;&#x5B89;&#x88C5;ruby">&#x672C;&#x5730;&#x5B89;&#x88C5;Ruby</h4>
+<p>&#x5982;&#x679C;&#x4E0D;&#x719F;&#x6089;&#x5176;&#x4ED6;&#x7684;&#x811A;&#x672C;&#x8BED;&#x8A00;&#xFF0C;&#x5EFA;&#x8BAE;&#x5728;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0A;&#x4E5F;&#x5B89;&#x88C5;Ruby&#xFF0C;&#x4FBF;&#x4E8E;&#x719F;&#x6089;&#x8BED;&#x6CD5;&#x4EE5;&#x53CA;&#x6267;&#x884C;&#x4E00;&#x4E9B;&#x811A;&#x672C;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;&#x5904;&#x7406;&#x5E76;&#x6253;&#x5305;&#x63D2;&#x4EF6;&#x6587;&#x4EF6;&#x3002;&#x5728;window&#x4E0A;&#x5B89;&#x88C5;Ruby&#x7684;&#x65B9;&#x5F0F;&#x4E00;&#x822C;&#x662F;&#x901A;&#x8FC7;<a href="http://rubyinstaller.org/" target="_blank">RubyInstaller</a>&#xFF0C;&#x5B89;&#x88C5;&#x540E;&#x9700;&#x5728;&#x547D;&#x4EE4;&#x7A97;&#x53E3;&#x6267;&#x884C;<code>gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/</code>&#x6765;&#x5207;&#x6362;gem&#x6E90;&#x3002;</p>
+<h4 id="&#x7F16;&#x8F91;&#x5668;">&#x7F16;&#x8F91;&#x5668;</h4>
+<p>&#x4EE3;&#x7801;&#x7F16;&#x8F91;&#x5668;&#x65B9;&#x9762;&#x559C;&#x6B22;&#x54EA;&#x4E2A;&#x5C31;&#x7528;&#x54EA;&#x4E2A;&#xFF0C;&#x63D2;&#x4EF6;&#x7248;&#x7684;&#x7F16;&#x8F91;&#x5668;&#x5728;&#x6D4B;&#x8BD5;&#x5C0F;&#x6BB5;&#x4EE3;&#x7801;&#x65F6;&#x662F;&#x6BD4;Ruby&#x63A7;&#x5236;&#x53F0;&#x8981;&#x65B9;&#x4FBF;&#x4E00;&#x70B9;&#x7684;&#x3002;&#x6211;&#x4E3B;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x662F;Sublime&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x7684;&#x5728;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x5185;&#x7684;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x8FDB;&#x884C;&#x8DF3;&#x8F6C;&#xFF0C;&#x7528;&#x6765;&#x7F16;&#x8F91;rb&#x3001;html&#x3001;js&#x4E0E;vue&#x7B49;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;&#x4E5F;&#x6BD4;&#x8F83;&#x5408;&#x9002;&#x3002;&#x5176;&#x4E2D;&#x7F16;&#x8F91;vue&#x6587;&#x4EF6;&#x65F6;&#x9700;&#x8981;&#x5B89;&#x88C5;Vue Syntax Highlight&#x63D2;&#x4EF6;&#x6765;&#x8FDB;&#x884C;&#x9AD8;&#x4EAE;&#x663E;&#x793A;&#x3002;</p>
+<h4 id="&#x7248;&#x672C;&#x63A7;&#x5236;">&#x7248;&#x672C;&#x63A7;&#x5236;</h4>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x89C4;&#x6A21;&#x7A0D;&#x5927;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x5EFA;&#x8BAE;&#x5BF9;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x7248;&#x672C;&#x63A7;&#x5236;&#xFF0C;git&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x597D;&#x7684;&#x9009;&#x62E9;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ruby.html" class="navigation navigation-prev " aria-label="Previous page: Ruby是根基">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="debug.html" class="navigation navigation-next " aria-label="Next page: 插件存放与调试">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"开发环境","level":"2.2","depth":1,"next":{"title":"插件存放与调试","level":"2.3","depth":1,"path":"develop_base/debug.md","ref":"develop_base/debug.md","articles":[]},"previous":{"title":"Ruby是根基","level":"2.1","depth":1,"path":"develop_base/ruby.md","ref":"develop_base/ruby.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing"],"styles":{"website":"./styles/website.css","pdf":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Shink","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SketchUp plugin tutorial","language":"zh-hans","gitbook":"3.2.3","description":"Shink SketchUp plugin tutorial"},"file":{"path":"develop_base/environment.md","mtime":"2020-01-09T06:37:09.965Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-13T08:40:33.469Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
